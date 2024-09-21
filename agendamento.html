@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento - Pet Zen</title>
+    <!--Inclusão do Bootstrap para estilização-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+      .navbar {
+        background-color: #ffdd00;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000000;
+      }
+      .nav-link {
+        color: #000000 !important;
+      }
+      .footer {
+        background-color: #ffdd00;
+        color: #000000;
+        text-align: center;
+        padding: 5px 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9rem;
+      }
+      .footer p {
+        margin: 0;
+      }
+      .form-section {
+        margin-top: 20px;
+      }
+
+      .footer a {
+        color: #000000;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pet Zen</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="agendamento.html"
+                  >Agendamento</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+              <a class="btn btn-outline-success ms-2" href="login.html"
+                >Login</a
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Conteúdo Principal-->
+    <div class="main-content">
+      <div class="container mt-4">
+        <h2>Agendamento de Serviços</h2>
+        <!--Formulário de agendamento-->
+        <form>
+          <div class="form-section">
+            <h4>Escolha o Serviço</h4>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="servicos"
+                  value="banho_pequeno"
+                />
+                Banho - Pequeno Porte
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="servicos"
+                  value="tosa_pequeno"
+                />
+                Tosa - Pequeno Porte
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="servicos"
+                  value="banho_grande"
+                />
+                Banho - Grande Porte
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="servicos"
+                  value="tosa_grande"
+                />
+                Tosa - Grande Porte
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Escolha o Tipo de Pet</h4>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipo_pet"
+                  value="cao"
+                  checked
+                />
+                Cão
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipo_pet"
+                  value="gato"
+                />
+                Gato
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Informações do Agendamento</h4>
+            <div class="mb-3">
+              <label for="data" class="form-label">Data</label>
+              <input
+                type="date"
+                class="form-control"
+                id="data"
+                name="data"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="hora" class="form-label">Hora</label>
+              <input
+                type="time"
+                class="form-control"
+                id="hora"
+                name="hora"
+                required
+              />
+            </div>
+
+            <!--Escolha de Tele-Busca-->
+            <div class="mb-3">
+              <label for="tele_busca" class="form-label"
+                >Deseja Tele-busca?</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tele_busca"
+                  id="tele_busca_sim"
+                  value="sim"
+                  onchange="mostrarEndereco()"
+                />
+                <label class="form-check-label" for="tele_busca_sim">Sim</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tele_busca"
+                  id="tele_busca_nao"
+                  value="nao"
+                  checked
+                  onchange="mostrarEndereco()"
+                />
+                <label class="form-check-label" for="tele_busca_nao">Não</label>
+              </div>
+            </div>
+
+            <!--Campo endereço, aparece apenas se "Sim" for selecionado-->
+            <div class="mb-3" id="campo_endereco" style="display: none">
+              <label for="endereco" class="form-label">Endereço</label>
+              <input
+                type="text"
+                class="form-control"
+                id="endereco"
+                name="endereco"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="observacoes" class="form-label">Observações</label>
+              <textarea
+                class="form-control"
+                id="observacoes"
+                name="observacoes"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Rodapé-->
+    <footer class="footer">
+      <p>&copy; 2024 Pet Zen. Todos os direitos reservados.</p>
+      <p>Endereço: Rua Conde, 123, Porto Alegre/RS</p>
+      <p>Telefone: (51) 1234-5678 | Email: caiolourenzo@hotmail.com.br</p>
+      <a href="index.html">Home</a>
+      <a href="contato.html">Contato</a>
+    </footer>
+
+    <script>
+      function mostrarEndereco() {
+        const teleBuscaSim = document.getElementById("tele_busca_sim").checked;
+        const campoEndereco = document.getElementById("campo_endereco");
+        campoEndereco.style.display = teleBuscaSim ? "block" : "none";
+      }
+      //Inclusão do JavaScript do Bootstrap
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

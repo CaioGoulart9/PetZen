@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Pet Zen</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      .navbar {
+        background-color: #ffdd00;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000000;
+      }
+      .nav-link {
+        color: #000000 !important;
+      }
+      .form-container {
+        max-width: 800px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pet Zen</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="agendamento.html">Agendamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="contato.html">Contato</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Pesquisar"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Buscar
+                </button>
+                <a class="btn btn-outline-success ms-2" href="login.html"
+                  >Login</a
+                >
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Formulário de Cadastro -->
+    <div class="container form-container">
+      <h2>Cadastro de Cliente e Pet</h2>
+      <form>
+        <!-- Dados do Cliente -->
+        <fieldset>
+          <legend>Informações do Cliente</legend>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              placeholder="Seu Nome"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="endereco" class="form-label">Endereço</label>
+            <input
+              type="text"
+              class="form-control"
+              id="endereco"
+              placeholder="Seu Endereço"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="telefone"
+              placeholder="Seu Telefone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Seu E-mail"
+              required
+            />
+          </div>
+        </fieldset>
+        <hr />
+
+        <!-- Dados do Pet -->
+        <fieldset>
+          <legend>Informações do Pet</legend>
+          <div class="mb-3">
+            <label for="petNome" class="form-label">Nome do Pet</label>
+            <input
+              type="text"
+              class="form-control"
+              id="petNome"
+              placeholder="Nome do Pet"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="petTipo" class="form-label">Tipo de Pet</label>
+            <select class="form-select" id="petTipo" required>
+              <option value="">Escolha...</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="petRaca" class="form-label">Raça</label>
+            <input
+              type="text"
+              class="form-control"
+              id="petRaca"
+              placeholder="Raça do Pet"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="petTemperamento" class="form-label">Temperamento</label>
+            <input
+              type="text"
+              class="form-control"
+              id="petTemperamento"
+              placeholder="Temperamento do Pet"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Sexo do Pet</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="sexoMacho"
+                name="sexoPet"
+                value="macho"
+                required
+              />
+              <label class="form-check-label" for="sexoMacho"> Macho </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="sexoFemea"
+                name="sexoPet"
+                value="femea"
+                required
+              />
+              <label class="form-check-label" for="sexoFemea"> Fêmea </label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="dataNascimentoPet" class="form-label"
+              >Data de Nascimento do Pet</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="dataNascimentoPet"
+              required
+            />
+          </div>
+        </fieldset>
+        <hr />
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

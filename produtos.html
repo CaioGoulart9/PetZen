@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos - Pet Zen</title>
+    <!--Inclusão do Bootstrap para estilização-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        flex: 1;
+      }
+      .navbar {
+        background-color: #ffdd00;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000000;
+      }
+      .nav-link {
+        color: #000000 !important;
+      }
+      .carousel-item img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .footer {
+        background-color: #ffdd00;
+        color: #000000;
+        text-align: center;
+        padding: 5px 10px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.9rem;
+      }
+      .footer p {
+        margin: 0;
+      }
+
+      .carousel-item img {
+        object-fit: contain; /*Garante que a imagem se encaixe dentro do contêiner*/
+        width: 100%;
+        height: 400px;
+      }
+
+      .card-img-top {
+        width: 100%;
+        max-height: 200px; /*Ajusta a altura máxima da imagem*/
+        object-fit: contain; /*Ajusta a imagem para caber no espaço sem que corte ela*/
+      }
+
+      .footer a {
+        color: #000000;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pet Zen</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agendamento.html">Agendamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+              <a class="btn btn-outline-success ms-2" href="login.html"
+                >Login</a
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Conteúdo Principal-->
+    <div class="main-content">
+      <div class="container mt-4">
+        <h2>Nossos Produtos</h2>
+
+        <!--Carrossel de Imagens-->
+        <div
+          id="produtosCarrossel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!--Card do 1º produto-->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://petbox.vteximg.com.br/arquivos/ids/159642-1000-1000/bb6fd026ff6bc00f6c427e8aee1a9701fd6090af.jpg?v=637490825816130000"
+                class="d-block w-100"
+                alt="Ração cachorro PP"
+              />
+            </div>
+            <!--Card do 2º produto-->
+            <div class="carousel-item">
+              <img
+                src="https://m.media-amazon.com/images/I/4176aJw9RGL.jpg"
+                class="d-block w-100"
+                alt="Ração Cachorro GP"
+              />
+            </div>
+            <!--Card do 3º produto-->
+            <div class="carousel-item">
+              <img
+                src="https://images.tcdn.com.br/img/img_prod/1187211/racao_golden_para_gatos_adultos_castrados_sabor_salmao_10_1kg_161_2_c6a0d1f6f2a59aa2df27cf9eb3e58439.png"
+                class="d-block w-100"
+                alt="Ração Úmida para Gatos 10kg"
+              />
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#produtosCarrossel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#produtosCarrossel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+
+        <hr />
+
+        <!-- Lista de Produtos -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="https://petbox.vteximg.com.br/arquivos/ids/159642-1000-1000/bb6fd026ff6bc00f6c427e8aee1a9701fd6090af.jpg?v=637490825816130000"
+                class="card-img-top"
+                alt="Ração Cachorro PP"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ração Cachorro Pequeno Porte</h5>
+                <p class="card-text">
+                  Ração GoldeN Sabor Frango e Arroz de 20kg para Cachorros até
+                  12 meses.
+                </p>
+                <p class="card-text"><strong>R$ 139,90</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="https://m.media-amazon.com/images/I/4176aJw9RGL.jpg"
+                class="card-img-top"
+                alt="Ração Cachorro GP"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ração Cachorro Grande Porte</h5>
+                <p class="card-text">
+                  Ração Pedigree 20kg para Cachorros adultos.
+                </p>
+                <p class="card-text"><strong>R$ 148,90</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <img
+                src="https://images.tcdn.com.br/img/img_prod/1187211/racao_golden_para_gatos_adultos_castrados_sabor_salmao_10_1kg_161_2_c6a0d1f6f2a59aa2df27cf9eb3e58439.png"
+                class="card-img-top"
+                alt="Ração Gato"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ração Úmida Gato</h5>
+                <p class="card-text">
+                  Ração GoldeN Sabor Salmão 10kg úmida para Gatos castrados.
+                </p>
+                <p class="card-text"><strong>R$ 69,99</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <p>&copy; 2024 Pet Zen. Todos os direitos reservados.</p>
+      <p>Endereço: Rua Conde, 123, Porto Alegre/RS</p>
+      <p>Telefone: (51) 1234-5678 | Email: caiolourenzo@hotmail.com.br</p>
+      <a href="index.html">Home</a>
+      <a href="contato.html">Contato</a>
+    </footer>
+
+    <script>
+      //Função para temporizar o carrossel
+      document.addEventListener("DOMContentLoaded", function () {
+        const carrosselElement = document.getElementById("produtosCarrossel");
+        const carrossel = new bootstrap.Carousel(carrosselElement, {
+          interval: 3000, //Tempo em milissegundos para mudar as imagens automaticamente
+          wrap: true, //Recomeçar o carrossel após o último slide
+        });
+      });
+    </script>
+    <!--Inclusão do JavaScript do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

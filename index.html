@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Zen - Página Inicial</title>
+    <!--Inclusão do Bootstrap para estilização-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      .navbar {
+        background-color: #ffdd00; /*Cor de fundo do cabeçalho*/
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000000;
+      }
+      .nav-link {
+        color: #000000 !important; /*Cor dos links de navegação*/
+      }
+      .img-custom {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .section-text {
+        font-size: 1.2rem;
+        color: #666;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .container {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pet Zen</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agendamento.html">Agendamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
+            <!--Formulário de busca e link de login-->
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+              <a class="btn btn-outline-success ms-2" href="login.html">
+                Login
+              </a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--Conteúdo da Página Inicial-->
+    <div class="container">
+      <h1 class="section-title">Bem-vindo ao Pet Zen!</h1>
+      <p class="section-text">
+        Aqui você encontrará rações secas e úmidas para seu pet, além do serviço
+        de banho e tosa disponível para agendamento. Tudo isso para garantir o
+        bem-estar do seu companheiro peludo.
+      </p>
+
+      <div class="row">
+        <div class="col-md-12">
+          <img
+            src="https://joaobidu.com.br/wp-content/uploads/2024/04/sonhar-com-animais.jpg"
+            class="img-custom"
+            alt="Cachorro e Gato"
+          />
+        </div>
+      </div>
+    </div>
+    <!--Inclusão do JavaScript do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
